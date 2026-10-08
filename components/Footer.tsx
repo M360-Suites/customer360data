@@ -1,7 +1,7 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const cols = [
-  { h: "Product", l: ["Features", "Pricing", "Integrations", "Consumer Research"] },
+  { h: "Product", l: ["Platform", "Use Cases", "Integrations", "Pricing"] },
   { h: "Resources", l: ["Case Studies", "Blog", "API Docs", "Help Center"] },
 ];
 

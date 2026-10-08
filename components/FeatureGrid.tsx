@@ -27,7 +27,6 @@ const features = [
   {
     title: "Consumer Research",
     icon: ClipboardList,
-    featured: true,
     desc: "Gather real-time consumer feedback and market insights at scale via USSD, SMS, Web, and WhatsApp to inform product updates and business intelligence.",
     points: ["Reach feature-phone and smartphone users", "Responses written straight to the profile", "NPS, CSAT, concept tests & market studies"],
   },
@@ -57,7 +56,7 @@ export default function FeatureGrid() {
 
   useEffect(() => {
     if (paused) return;
-    const id = setInterval(() => setActive((a) => (a + 1) % features.length), 4500);
+    const id = setInterval(() => setActive((a) => (a + 1) % features.length), 10000);
     return () => clearInterval(id);
   }, [paused]);
 
@@ -68,7 +67,7 @@ export default function FeatureGrid() {
       <div className="absolute inset-0 bg-grid [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_75%)]" />
       <div className="relative max-w-7xl mx-auto px-6">
         <Reveal className="max-w-3xl">
-          <Eyebrow num="02" dark>What We Do</Eyebrow>
+          <Eyebrow num="03" dark>Capabilities</Eyebrow>
           <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight">
             Six capabilities. <span className="text-gold">One connected customer view.</span>
           </h2>
@@ -95,7 +94,7 @@ export default function FeatureGrid() {
             <motion.div
               className="absolute inset-0"
               animate={{ rotate: 360 }}
-              transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 150, repeat: Infinity, ease: "linear" }}
             >
               <svg viewBox="0 0 100 100" className="w-full h-full" aria-hidden>
                 <circle cx="50" cy="50" r={R} fill="none" stroke="rgba(197,155,39,0.35)" strokeWidth="0.25" strokeDasharray="1 2" />
@@ -153,7 +152,7 @@ export default function FeatureGrid() {
                 >
                   <motion.span
                     animate={{ scale: on ? 1.2 : 1, y: [0, -4, 0] }}
-                    transition={{ scale: { duration: 0.3 }, y: { duration: 4, repeat: Infinity, delay: i * 0.4 } }}
+                    transition={{ scale: { duration: 0.3 }, y: { duration: 8, repeat: Infinity, delay: i * 0.6, ease: "easeInOut" } }}
                     className={`flex w-14 h-14 sm:w-16 sm:h-16 rounded-full items-center justify-center border transition-colors ${
                       on ? "bg-white text-navy border-white shadow-[0_0_30px_rgba(255,255,255,0.35)]" : "bg-navy-card text-white/80 border-white/20 group-hover:border-gold"
                     }`}
@@ -187,11 +186,6 @@ export default function FeatureGrid() {
                     <div className="text-xs font-semibold tracking-widest text-gold">0{active + 1} / 06</div>
                     <h3 className="text-2xl font-bold text-white">{f.title}</h3>
                   </div>
-                  {f.featured && (
-                    <span className="ml-auto hidden sm:block text-[10px] font-bold tracking-widest uppercase text-gold border border-gold/50 rounded-full px-3 py-1">
-                      Key differentiator
-                    </span>
-                  )}
                 </div>
                 <p className="mt-6 text-white/75 leading-relaxed">{f.desc}</p>
                 <ul className="mt-6 space-y-3">
@@ -220,7 +214,7 @@ export default function FeatureGrid() {
                       className="absolute inset-y-0 left-0 bg-gold"
                       initial={{ width: paused ? "100%" : "0%" }}
                       animate={{ width: "100%" }}
-                      transition={{ duration: paused ? 0 : 4.5, ease: "linear" }}
+                      transition={{ duration: paused ? 0 : 10, ease: "linear" }}
                     />
                   )}
                 </button>

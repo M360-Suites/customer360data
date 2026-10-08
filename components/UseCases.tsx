@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Landmark, ShoppingCart, RadioTower, Check } from "lucide-react";
+import { Landmark, ShoppingCart, Building2, Check } from "lucide-react";
 import { Eyebrow, Reveal } from "./Reveal";
 
 const cases = [
@@ -33,17 +33,17 @@ const cases = [
     metric: ["2×", "faster launch insight"],
   },
   {
-    id: "telco",
-    tab: "Telecommunications",
-    icon: RadioTower,
-    desc: "Leverage telco data, proprietary data, and online publishers for the most relevant consumer insights to intelligently connect with customers.",
+    id: "realestate",
+    tab: "Real Estate",
+    icon: Building2,
+    desc: "Give developers, agents and property managers a 360-degree view of every buyer, tenant and investor — so the right enquiry gets the right follow-up at the right moment.",
     points: [
-      "Blend network, recharge and usage data with first-party profiles",
-      "Predict churn and trigger tailored retention bundles",
-      "Monetise audiences safely through the Data Marketplace",
-      "Segment by device, spend and engagement in real time",
+      "Capture leads from portals, WhatsApp, site visits and agents into one profile",
+      "Score leads and predict purchase or rental intent",
+      "Automate viewing reminders, offers and renewal journeys",
+      "Survey buyers and residents via WhatsApp, SMS and USSD on satisfaction and demand",
     ],
-    metric: ["-25%", "subscriber churn"],
+    metric: ["2×", "faster lead follow-up"],
   },
 ];
 
@@ -54,7 +54,7 @@ export default function UseCases() {
     <section id="solutions" className="bg-mist py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6">
         <Reveal className="max-w-3xl">
-          <Eyebrow num="05">Solutions</Eyebrow>
+          <Eyebrow num="05">Industries</Eyebrow>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">Made for how Africa&apos;s industries work.</h2>
         </Reveal>
 

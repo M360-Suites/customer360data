@@ -5,9 +5,9 @@ import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { label: "Product", href: "#product" },
-  { label: "Solutions", href: "#solutions" },
-  { label: "Consumer Research", href: "#consumer-research" },
+  { label: "Platform", href: "#platform" },
+  { label: "Use Cases", href: "#use-cases" },
+  { label: "Industries", href: "#solutions" },
   { label: "Pricing", href: "#pricing" },
 ];
 

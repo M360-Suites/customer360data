@@ -2,9 +2,9 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ProblemSolution from "@/components/ProblemSolution";
+import PlatformFlow from "@/components/PlatformFlow";
 import FeatureGrid from "@/components/FeatureGrid";
-import Retention from "@/components/Retention";
-import ConsumerResearch from "@/components/ConsumerResearch";
+import UseCasesGrid from "@/components/UseCasesGrid";
 import UseCases from "@/components/UseCases";
 import HowItWorks from "@/components/HowItWorks";
 import Integrations from "@/components/Integrations";
@@ -21,9 +21,9 @@ export default function Home() {
       <main>
         <Hero />
         <ProblemSolution />
+        <PlatformFlow />
         <FeatureGrid />
-        <Retention />
-        <ConsumerResearch />
+        <UseCasesGrid />
         <UseCases />
         <HowItWorks />
         <Integrations />

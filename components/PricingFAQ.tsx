@@ -21,6 +21,7 @@ const faqs = [
 export default function PricingFAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
+    <>
     <section id="pricing" className="bg-white py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6">
         <Reveal className="max-w-3xl">
@@ -50,8 +51,12 @@ export default function PricingFAQ() {
             </Reveal>
           ))}
         </div>
+      </div>
+    </section>
 
-        <div className="mt-24 max-w-3xl">
+    <section id="faq" className="bg-mist py-24 lg:py-32">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-3xl">
           <Eyebrow num="09">FAQ</Eyebrow>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Questions, answered.</h2>
           <div className="mt-8 divide-y divide-slate-200 border-y border-slate-200">
@@ -72,5 +77,6 @@ export default function PricingFAQ() {
         </div>
       </div>
     </section>
+    </>
   );
 }
